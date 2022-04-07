@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true,
+      "maxLength": 160,
+      "minLength": 5,
+      "unique": true
+    },
+    "discount_percentage": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "quantity": {
+      "pluginOptions": {},
+      "type": "integer"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {}
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "seller": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::seller.seller",
+      "inversedBy": "products"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "targetField": "title"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "products"
+    },
+    "meta_description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 160
+    },
+    "meta_title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 60
+    },
+    "agotado": {
+      "type": "boolean",
+      "default": false
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "float",
+      "required": true
+    },
+    "colors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::color.color",
+      "inversedBy": "products"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colors",
+  "info": {
+    "singularName": "color",
+    "pluralName": "colors",
+    "displayName": "color"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "sin color"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "colors"
+    }
+  }
+}
