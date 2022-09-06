@@ -15,6 +15,14 @@
     "name": {
       "pluginOptions": {},
       "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

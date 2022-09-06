@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contactuses",
+  "info": {
+    "singularName": "contactus",
+    "pluralName": "contactuses",
+    "displayName": "contactus"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "maxLength": 150,
+      "required": true,
+      "minLength": 4
+    },
+    "comment": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 8000
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
