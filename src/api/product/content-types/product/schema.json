@@ -90,6 +90,16 @@
       "relation": "manyToMany",
       "target": "api::color.color",
       "inversedBy": "products"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "CUP",
+        "USD",
+        "MLC"
+      ],
+      "default": "CUP",
+      "required": true
     }
   }
 }
